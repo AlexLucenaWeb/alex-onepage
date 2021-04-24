@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Alex Lucena</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -11,23 +11,47 @@
   <body>
     <!-- FIXED BACKGROUDS -->
     <div class="bg">
-      <div class="bg__back">
-        <div class="bg__front"></div>
-        <div class="bg__botton"></div>
-      </div>
+      <div class="bg__back"></div>
+      <div class="bg__front"></div>
+      <div class="bg__botton"></div>
     </div>
     <!-- NAV -->
-    <nav class="nav"></nav>
+    <nav class="nav">
+      <ul>
+        <li href="#">bio</li>
+        <li href="#">work</li>
+        <li href="#">contact</li>
+      </ul>
+    </nav>
 
     <!-- SECTIONS -->
     <!-- animation -->
-    <section class="animation"></section>
+    <section class="animation">
+      <p>Hello!</p>
+      <p>I'm</p>
+      <div class="name-container"><h2 class="name">alex</h2></div>
+    </section>
     <!-- bio -->
-    <section class="bio"></section>
+    <section class="bio">
+      <h2 class="section__title">BIO</h2>
+      <div>
+        <img
+          class="bio__img"
+          src="./public/images/alex-photo.png"
+          alt="Alex Lucena photo"
+        />
+      </div>
+    </section>
     <!-- work -->
-    <section class="work"></section>
+    <section class="work">
+      <h2 class="section__title">Work</h2>
+      <div></div>
+    </section>
     <!-- contact -->
-    <section class="contact"></section>
+    <section class="contact">
+      <h2 class="section__title">Contact</h2>
+      <div></div>
+    </section>
   </body>
   <script src="/script.js"></script>
 </html>

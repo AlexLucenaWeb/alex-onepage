@@ -1,0 +1,91 @@
+/* BODY */
+@font-face {
+  font-family: jeko;
+  src: url("../public/fonts/Jeko-Extra-Bold.ttf"),
+    url("../public/fonts/Jeko-Regular.ttf"),
+    url("../public/fonts/Jeko-Light.ttf");
+}
+body {
+  margin: 0;
+  font-family: jeko, sans-serif;
+  /* font-weight: normal; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* -- FIXED BACGROUDS -- */
+.bg__back {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.bg__front {
+  position: fixed;
+  z-index: -1;
+  top: 50px;
+  left: 50px;
+  width: calc(100vw - 117px);
+  height: calc(100vh - 100px);
+  background-color: #ff5851;
+}
+.bg__botton {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: white;
+}
+
+/* -- NAV -- */
+nav {
+  position: fixed;
+  top: 50px;
+  width: calc(100vw - 117px);
+  text-align: right;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+
+/* -- SECTIONS -- */
+section {
+  width: calc(100vw - 117px);
+  min-height: calc(100vh - 100px);
+  margin: 50px 0 0 50px;
+}
+
+/* -- animation -- */
+.name-container {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  font-size: 15rem;
+  color: #ffffff;
+  margin: 0;
+}
+.name{
+    font-size: 15rem;
+    color: #ffffff;
+    margin: 0;
+}
+p{
+    font-size: 8rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* -- bio -- */
