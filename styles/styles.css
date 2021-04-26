@@ -48,6 +48,7 @@ body {
 nav {
   position: fixed;
   top: 50px;
+  left: 50px;
   width: calc(100vw - 117px);
   text-align: right;
   opacity: 0;
@@ -57,11 +58,7 @@ nav {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-nav-active {
-  position: fixed;
-  top: 50px;
-  width: calc(100vw - 117px);
-  text-align: right;
+.nav-active {
   opacity: 1;
 
 }
@@ -70,8 +67,10 @@ ul {
 }
 li {
   display: inline;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
+  font-size: 2rem;
 }
 
 /* -- SECTIONS -- */
@@ -98,20 +97,22 @@ section {
 }
 .hello-active {
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+
 }
 .iam {
   position: fixed;
   top: 30vh;
   left: 33vw;
   opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .iam-active {
   opacity: 0;
+  
 }
 .iam > p,
 .hello > p {
