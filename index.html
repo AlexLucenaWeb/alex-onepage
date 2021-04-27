@@ -13,14 +13,16 @@
     <div class="bg">
       <div class="bg__back"></div>
       <div class="bg__front"></div>
+      <div class="front__left bg-hide"></div>
+      <div class="front__right bg-hide"></div>
       <div class="bg__botton"></div>
     </div>
     <!-- NAV -->
     <nav class="nav" id="nav">
       <ul>
-        <li href="#">bio</li>
-        <li href="#">work</li>
-        <li href="#">contact</li>
+        <li id="bioLink"><a href="#" class="link">bio</a></li>
+        <li id="workLink"><a href="#" class="link">work</a></li>
+        <li id="contactLink"><a href="#" class="link">contact</a></li>
       </ul>
     </nav>
 
@@ -28,12 +30,12 @@
     <!-- animation -->
     <section class="animation">
       <div class="hello" id="hello">
-        <p>Hello!</p>
+        <p class="index">Hello!</p>
       </div>
       <div class="iam" id="iam">
         <p>I'm</p>
       </div>
-      <div class="alex">
+      <div class="alex" id="alex">
         <div class="a" id="letterA">
           <img src="./public/images/a-letter.png" />
         </div>

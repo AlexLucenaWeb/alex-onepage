@@ -34,6 +34,24 @@ body {
   height: calc(100vh - 100px);
   background-color: #ff5851;
 }
+.front__left{
+  position: fixed;
+  z-index:10;
+  width: calc(50vw - 50px);
+  height: 300px;
+  left: 50px;
+  bottom: 50px;
+  background-color:#ff5851;
+}
+.front__right{
+  position: fixed;
+  z-index:12;
+  width: calc(50vw - 65px);
+  height: 50vh;
+  right: 65px;
+  top: 50px;
+  background-color:#ff5851;
+}
 .bg__botton {
   position: fixed;
   z-index: 999;
@@ -52,6 +70,7 @@ nav {
   width: calc(100vw - 117px);
   text-align: right;
   opacity: 0;
+  height: 40px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -60,17 +79,34 @@ nav {
 }
 .nav-active {
   opacity: 1;
-
 }
 ul {
   list-style: none;
+  padding-right: 30px;
+  margin: 0;
 }
-li {
+li{
   display: inline;
   padding-left: 10px;
   padding-right: 10px;
-  color: #ffffff;
   font-size: 2rem;
+}
+.link{
+  text-decoration: none;
+  /* color: #000000;s */
+  color: #ffffff;
+  position: relative;
+  bottom: 0px;
+}
+
+/* links  */
+.link-active{
+  position: relative;
+  bottom: 50px;
+  color: #000000 !important;
+  z-index: 999;
+
+
 }
 
 /* -- SECTIONS -- */
@@ -82,18 +118,23 @@ section {
 
 /* -- animation section-- */
 .animation {
-  height: calc(100vh + 750px);
+  height: calc(100vh + 600px);
 }
 .hello {
   position: fixed;
-  top: 5vh;
-  left: 20vw;
+  z-index: 1;
+  top: 7vh;
+  left: 50vw;
   opacity: 1;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+.index{
+  position: fixed;
+  z-index: 1;
 }
 .hello-active {
   opacity: 0;
@@ -102,7 +143,7 @@ section {
 .iam {
   position: fixed;
   top: 30vh;
-  left: 33vw;
+  left: 60vw;
   opacity: 1;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -123,6 +164,7 @@ section {
 
 .alex {
   width: calc(100vw - 117px);
+  z-index: 9;
   height: 300px;
   position: fixed;
   bottom: 20px;
@@ -130,20 +172,21 @@ section {
 .a {
   position: absolute;
   bottom: 50px;
+  z-index: 9;
   left: 45vw;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .a-active {
-  left: 25px;
+  left: 29px;
   bottom: 10px;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -175,14 +218,14 @@ section {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .x1-active {
-  left: 120px;
+  left: 124px;
   bottom: 10px;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -199,11 +242,11 @@ section {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .x2-active {
   left: -50px;

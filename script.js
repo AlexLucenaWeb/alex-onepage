@@ -1,13 +1,41 @@
+$(document).ready(function () {
+  console.log("ready");
+  $("#hello").animate({ left: "20vw" }, "slow");
+  $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
+  $("#alex").css({ left: "-500px" });
+  $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
+  $(window).scroll(function () {
+    $(".bg-hide").css("display", "none");
+  });
+});
+
 // SCROLL MAGIC:
 // init controller
 var controller = new ScrollMagic.Controller();
 
 // NAVIGATION
-var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -200})
+// Menu
+var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -200 })
   .setClassToggle("#nav", "nav-active")
   .addTo(controller);
 
+// Links
+// var sceneBioLink = new ScrollMagic.Scene({ triggerElement: "#bio" })
+//   .setClassToggle("#bioLink", "link-active")
+//   .addTo(controller);
+
+// var sceneWorkLink = new ScrollMagic.Scene({ triggerElement: "#work" })
+//   .setClassToggle("#workLink", "link-active")
+//   .addTo(controller);
+
+// var sceneContactLink = new ScrollMagic.Scene({ triggerElement: "#contact" })
+//   .setClassToggle("#contactLink", "link-active")
+//   .addTo(controller);
+
 // Animation Section:
+// var sceneBg = new ScrollMagic.Scene({ offset: 1 })
+//   .setClassToggle(".front__left", "hide")
+//   .addTo(controller);
 // letter a:
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
