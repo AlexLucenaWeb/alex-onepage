@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Alex Lucena</title>
+    <link rel="shortcut icon" href="./public/images/favicon-alex.png" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script src="node_modules\scrollmagic\scrollmagic\minified\ScrollMagic.min.js"></script>
     <script src="node_modules\scrollmagic\scrollmagic\minified\plugins\debug.addIndicators.min.js"></script>
@@ -15,14 +16,21 @@
       <div class="bg__front"></div>
       <div class="front__left bg-hide"></div>
       <div class="front__right bg-hide"></div>
+      <div class="bg__top"></div>
       <div class="bg__botton"></div>
     </div>
     <!-- NAV -->
     <nav class="nav" id="nav">
       <ul>
-        <li id="bioLink"><a href="#" class="link">bio</a></li>
-        <li id="workLink"><a href="#" class="link">work</a></li>
-        <li id="contactLink"><a href="#" class="link">contact</a></li>
+        <li id="bioLink">
+          <a href="#bio" class="link">bio</a>
+        </li>
+        <li id="workLink">
+          <a href="#" class="link">work</a>
+        </li>
+        <li id="contactLink">
+          <a href="#" class="link">contact</a>
+        </li>
       </ul>
     </nav>
 
@@ -54,11 +62,20 @@
     <!-- bio -->
     <section id="bio">
       <h2 class="section__title">BIO</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-         aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-         nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure </p>
-      <div id="bioImg" class="bio__img">
-        <img src="./public/images/alex-photo.png" alt="Alex Lucena photo" />
+      <div class="section__content">
+        <div class="bio__info">
+          <p>
+            I am Alex, a spanish <span class="white">web developer</span> based
+            in <span class="white">Dublin</span>. <br />After several years
+            working in the education sistem, I decided to move forward and find
+            my place in the web technologies area. I have been working to
+            improve my skills and develop my own projects to turn this passion
+            into a profesion.
+          </p>
+        </div>
+        <div id="bioImg" class="bio__img">
+          <img src="./public/images/alex-photo.png" alt="Alex Lucena photo" />
+        </div>
       </div>
     </section>
     <!-- work -->

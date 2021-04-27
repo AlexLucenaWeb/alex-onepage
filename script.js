@@ -1,12 +1,28 @@
 $(document).ready(function () {
   console.log("ready");
-  $("#hello").animate({ left: "20vw" }, "slow");
-  $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
-  $("#alex").css({ left: "-500px" });
-  $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
-  $(window).scroll(function () {
+
+  //Create on document ready animations jut if we are in the top of the document
+  if (
+    $(window).scrollTop() == 0 ||
+    $(window).scrollTop() == $(document).height() - $(window).height()
+  ) {
+    $("#hello").animate({ left: "20vw" }, "slow");
+    $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
+    $("#alex").css({ left: "-500px" });
+    $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
+    // $("#hello").css("display", "block" );
+    // $("#iam").css("display", "block" );
+    $(window).scroll(function () {
+      $(".bg-hide").css("display", "none");
+    });
+  } else {
     $(".bg-hide").css("display", "none");
-  });
+    // $("#hello").css("display", "none" );
+    // $("#iam").css("display", "none" );
+  }
+  // $(window).scroll(function () {
+  //   $(".bg-hide").css("display", "none");
+  // });
 });
 
 // SCROLL MAGIC:

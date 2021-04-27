@@ -1,4 +1,5 @@
 /* BODY */
+/* fonts */
 @font-face {
   font-family: jeko;
   src: url("../public/fonts/Jeko-Extra-Bold.ttf"),
@@ -14,8 +15,11 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-
-/* -- FIXED BACGROUDS -- */
+/* general classes */
+.white{
+  color: #ffffff
+}
+/* -- FIXED BACKGROUDS -- */
 .bg__back {
   position: fixed;
   z-index: -2;
@@ -59,8 +63,18 @@ body {
   right: 0;
   width: 100vw;
   height: 50px;
-  background-color: white;
+  background-color: #ffffff;
 }
+.bg__top {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: #ffffff;
+}
+
 
 /* -- NAV -- */
 nav {
@@ -114,6 +128,10 @@ section {
   width: calc(100vw - 117px);
   min-height: calc(100vh - 100px);
   margin: 50px 0 0 50px;
+}
+.section__content{
+  padding: 50px;
+  display: flex;
 }
 
 /* -- animation section-- */
