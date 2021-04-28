@@ -10,19 +10,12 @@ $(document).ready(function () {
     $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
     $("#alex").css({ left: "-500px" });
     $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
-    // $("#hello").css("display", "block" );
-    // $("#iam").css("display", "block" );
     $(window).scroll(function () {
       $(".bg-hide").css("display", "none");
     });
   } else {
     $(".bg-hide").css("display", "none");
-    // $("#hello").css("display", "none" );
-    // $("#iam").css("display", "none" );
   }
-  // $(window).scroll(function () {
-  //   $(".bg-hide").css("display", "none");
-  // });
 });
 
 // SCROLL MAGIC:
@@ -36,22 +29,11 @@ var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -200 })
   .addTo(controller);
 
 // Links
-// var sceneBioLink = new ScrollMagic.Scene({ triggerElement: "#bio" })
-//   .setClassToggle("#bioLink", "link-active")
-//   .addTo(controller);
+var sceneBioLink = new ScrollMagic.Scene({ triggerElement: "#bio", })
+  .setClassToggle("#nav", "nav-active")
+  .addIndicators() // add indicators (requires plugin)
+  .addTo(controller);
 
-// var sceneWorkLink = new ScrollMagic.Scene({ triggerElement: "#work" })
-//   .setClassToggle("#workLink", "link-active")
-//   .addTo(controller);
-
-// var sceneContactLink = new ScrollMagic.Scene({ triggerElement: "#contact" })
-//   .setClassToggle("#contactLink", "link-active")
-//   .addTo(controller);
-
-// Animation Section:
-// var sceneBg = new ScrollMagic.Scene({ offset: 1 })
-//   .setClassToggle(".front__left", "hide")
-//   .addTo(controller);
 // letter a:
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
@@ -79,7 +61,13 @@ var sceneIam = new ScrollMagic.Scene({ offset: 200 })
 
 // Bio Section
 var sceneBioImg = new ScrollMagic.Scene({ triggerElement: "#bio", offset: 200 })
-  // trigger a velocity opaticy animation
   .setClassToggle("#bioImg", "bio__img-active")
-  .addIndicators() // add indicators (requires plugin)
+  .addTo(controller);
+
+var sceneWorkBg = new ScrollMagic.Scene({ triggerElement: "#work" })
+  .setClassToggle("#bgFront", "bg__front-work")
+  .addTo(controller);
+
+var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
+  .setClassToggle("#bgFront", "bg__front-contact")
   .addTo(controller);
