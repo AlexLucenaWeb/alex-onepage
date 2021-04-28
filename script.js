@@ -16,6 +16,50 @@ $(document).ready(function () {
   } else {
     $(".bg-hide").css("display", "none");
   }
+
+  //if on screen:
+  $.fn.isOnScreen = function () {
+    var win = $(window);
+
+    var viewport = {
+      top: win.scrollTop(),
+      left: win.scrollLeft(),
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return !(
+      viewport.right < bounds.left ||
+      viewport.left > bounds.right ||
+      viewport.bottom < bounds.top ||
+      viewport.top > bounds.bottom
+    );
+  };
+  // Nav links animation:
+  $(window).scroll(function () {
+    if ($("#bio").isOnScreen() == true) {
+      console.log("bio")
+      $("#bioLink").addClass("link-active");
+      $("#workLink").removeClass("link-active");
+      $("#contactLink").removeClass("link-active");
+    }
+    if ($("#work").isOnScreen() == true) {
+      console.log("bio")
+      $("#bioLink").removeClass("link-active");
+      $("#workLink").addClass("link-active");
+      $("#contactLink").removeClass("link-active");
+    }
+    if ($("#contact").isOnScreen() == true) {
+      console.log("bio")
+      $("#bioLink").removeClass("link-active");
+      $("#workLink").removeClass("link-active");
+      $("#contactLink").addClass("link-active");
+    }
+  });
 });
 
 // SCROLL MAGIC:
@@ -24,16 +68,11 @@ var controller = new ScrollMagic.Controller();
 
 // NAVIGATION
 // Menu
-var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -200 })
+var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -300 })
   .setClassToggle("#nav", "nav-active")
   .addTo(controller);
 
-// Links
-var sceneBioLink = new ScrollMagic.Scene({ triggerElement: "#bio", })
-  .setClassToggle("#nav", "nav-active")
-  .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
-
+// Section: ANimation.
 // letter a:
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
@@ -59,7 +98,7 @@ var sceneIam = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#iam", "iam-active")
   .addTo(controller);
 
-// Bio Section
+// Section: Bio
 var sceneBioImg = new ScrollMagic.Scene({ triggerElement: "#bio", offset: 200 })
   .setClassToggle("#bioImg", "bio__img-active")
   .addTo(controller);
