@@ -42,19 +42,16 @@ $(document).ready(function () {
   // Nav links animation:
   $(window).scroll(function () {
     if ($("#bio").isOnScreen() == true) {
-      console.log("bio")
       $("#bioLink").addClass("link-active");
       $("#workLink").removeClass("link-active");
       $("#contactLink").removeClass("link-active");
     }
     if ($("#work").isOnScreen() == true) {
-      console.log("bio")
       $("#bioLink").removeClass("link-active");
       $("#workLink").addClass("link-active");
       $("#contactLink").removeClass("link-active");
     }
     if ($("#contact").isOnScreen() == true) {
-      console.log("bio")
       $("#bioLink").removeClass("link-active");
       $("#workLink").removeClass("link-active");
       $("#contactLink").addClass("link-active");
