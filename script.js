@@ -57,6 +57,23 @@ $(document).ready(function () {
       $("#contactLink").addClass("link-active");
     }
   });
+
+  // Lests talk array:
+  const list = document.querySelector("#list");
+  const display = (s) => (list.innerText = s);
+  const names = ["talk", "design", "code", "work"];
+  const delayLoop = (fn, delay) => {
+    return (name, i) => {
+      setTimeout(() => {
+        display(name);
+      }, i * 1500);
+    };
+  };
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() -1) {
+      names.forEach(delayLoop(display, 10000));
+    }
+ });
 });
 
 // SCROLL MAGIC:
@@ -106,4 +123,14 @@ var sceneWorkBg = new ScrollMagic.Scene({ triggerElement: "#work" })
 
 var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
   .setClassToggle("#bgFront", "bg__front-contact")
+  .addTo(controller);
+
+// section contact:
+var sceneLets = new ScrollMagic.Scene({ triggerElement: "#contact", offset: 200})
+  .setClassToggle("#lets", "lets-active")
+  .addIndicators()
+  .addTo(controller);
+
+var sceneTalk = new ScrollMagic.Scene({ triggerElement: "#contact", offset: 200})
+  .setClassToggle("#list", "talk-active")
   .addTo(controller);
