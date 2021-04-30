@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#alex").css({ left: "-500px" });
     $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
     $(".bg-hide").css("display", "fixed");
-  } 
+  }
 
   $(window).scroll(function () {
     $(".bg-hide").css("display", "none");
@@ -133,6 +133,12 @@ var sceneLets = new ScrollMagic.Scene({
 })
   .setClassToggle("#lets", "lets-active")
   .addTo(controller);
+  
+var sceneHello = new ScrollMagic.Scene({
+  triggerElement: "#contact",
+})
+.setClassToggle("#hello", "display-none")
+.addTo(controller);
 
 var sceneTalk = new ScrollMagic.Scene({
   triggerElement: "#contact",
