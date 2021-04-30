@@ -12,12 +12,13 @@ body {
   /* font-weight: normal; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 /* general classes */
 .white {
   color: #ffffff;
+}
+a {
+  text-decoration: none;
 }
 /* -- FIXED BACKGROUDS -- */
 .bg__back {
@@ -162,6 +163,7 @@ section:last-of-type {
 .section__title {
   color: #ffffff;
   font-size: 3rem;
+  text-align: center;
 }
 .section__contact {
   height: calc(100vh - 200px);
@@ -311,7 +313,12 @@ section:last-of-type {
 /* -- bio -- */
 .bio__info {
   max-width: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: left;
+}
+.bio__info a{
+  color: #ffffff;
 }
 .bio__img {
   /* width: 400px; */
@@ -372,9 +379,6 @@ section:last-of-type {
 .link__logo {
   width: 50px;
   margin-right: 20px;
-}
-a {
-  text-decoration: none;
 }
 .contact__link:hover {
   -webkit-transform: scale(1.1);
