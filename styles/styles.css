@@ -341,29 +341,36 @@ section:last-of-type {
 
 /* -- contanct -- */
 .contact__title {
-  color: #ffffff;
-  font-size: 13rem;
-  position: absolute; 
-  text-align: center;
+  position: absolute;
   right: calc(50px + 10vw);
   width: 40vw;
+  font-size: 8rem;
+  line-height: 85%;
+  text-align: center;
+  color: #ffffff;
 }
 .contact__title p {
   margin: 0;
 }
-.contact__links{
+.contact__links {
   position: relative;
   left: 15vw;
 }
-.contact__link{
+.contact__link {
   display: flex;
+  align-items: center;
   margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 2rem;
 }
 .link__logo {
   width: 50px;
   margin-right: 20px;
 }
-.lets{
+a{
+  text-decoration: none;
+}
+.lets {
   position: relative;
   bottom: -11rem;
   opacity: 0;
@@ -373,7 +380,7 @@ section:last-of-type {
   -o-transform: scale(0.8);
   transform: scale(0.8);
 }
-.lets-active{
+.lets-active {
   bottom: 0;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -397,7 +404,7 @@ section:last-of-type {
   background-color: black;
   z-index:13;
 } */
-.talk{
+.talk {
   position: relative;
   bottom: -11rem;
   opacity: 0;
@@ -407,7 +414,7 @@ section:last-of-type {
   -o-transform: scale(0.8);
   transform: scale(0.8);
 }
-.talk-active{
+.talk-active {
   bottom: 0;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -420,7 +427,6 @@ section:last-of-type {
   -ms-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-
 }
 /* .talk__curtain{
   position:fixed;

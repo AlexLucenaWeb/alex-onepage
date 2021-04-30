@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $(this).scrollTop(0);
   console.log("ready");
 
   //Create on document ready animations jut if we are in the top of the document
@@ -10,12 +11,12 @@ $(document).ready(function () {
     $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
     $("#alex").css({ left: "-500px" });
     $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
-    $(window).scroll(function () {
-      $(".bg-hide").css("display", "none");
-    });
-  } else {
+    $(".bg-hide").css("display", "fixed");
+  } 
+
+  $(window).scroll(function () {
     $(".bg-hide").css("display", "none");
-  }
+  });
 
   //if on screen:
   $.fn.isOnScreen = function () {
@@ -69,11 +70,11 @@ $(document).ready(function () {
       }, i * 1500);
     };
   };
-  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() > $(document).height() -1) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
       names.forEach(delayLoop(display, 10000));
     }
- });
+  });
 });
 
 // SCROLL MAGIC:
@@ -126,11 +127,17 @@ var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
   .addTo(controller);
 
 // section contact:
-var sceneLets = new ScrollMagic.Scene({ triggerElement: "#contact", offset: 200})
+var sceneLets = new ScrollMagic.Scene({
+  triggerElement: "#contact",
+  offset: 200,
+})
   .setClassToggle("#lets", "lets-active")
-  .addIndicators()
   .addTo(controller);
 
-var sceneTalk = new ScrollMagic.Scene({ triggerElement: "#contact", offset: 200})
+var sceneTalk = new ScrollMagic.Scene({
+  triggerElement: "#contact",
+  offset: 200,
+})
   .setClassToggle("#list", "talk-active")
+  // .addIndicators()
   .addTo(controller);
