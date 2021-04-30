@@ -8,15 +8,10 @@ $(document).ready(function () {
     $(window).scrollTop() == $(document).height() - $(window).height()
   ) {
     $("#hello").animate({ left: "20vw" }, "slow");
-    $("#iam").delay(1000).animate({ left: "33vw" }, "slow");
-    $("#alex").css({ left: "-500px" });
-    $("#alex").delay(2500).animate({ left: "5vw" }, "slow");
+    $("#iam").delay(1000).animate({ left: "30vw" }, "slow");
+    $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
     $(".bg-hide").css("display", "fixed");
   }
-
-  $(window).scroll(function () {
-    $(".bg-hide").css("display", "none");
-  });
 
   //if on screen:
   $.fn.isOnScreen = function () {
@@ -40,6 +35,7 @@ $(document).ready(function () {
       viewport.top > bounds.bottom
     );
   };
+  
   // Nav links animation:
   $(window).scroll(function () {
     if ($("#bio").isOnScreen() == true) {
@@ -89,6 +85,10 @@ var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -300 })
 
 // Section: ANimation.
 // letter a:
+// var sceneWindows = new ScrollMagic.Scene({ offset: 10 })
+//   .setClassToggle("#alexWindows", "alex__windows-active")
+//   .addTo(controller);
+
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
   .addTo(controller);
