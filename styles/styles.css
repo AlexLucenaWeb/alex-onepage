@@ -352,6 +352,7 @@ section:last-of-type {
 .contact__title p {
   margin: 0;
 }
+/* links */
 .contact__links {
   position: relative;
   left: 15vw;
@@ -362,14 +363,44 @@ section:last-of-type {
   margin-bottom: 30px;
   color: #ffffff;
   font-size: 2rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .link__logo {
   width: 50px;
   margin-right: 20px;
 }
-a{
+a {
   text-decoration: none;
 }
+.contact__link:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.email__link:hover span {
+  display: none;
+}
+.email__link:hover:after {
+  content: "alucena.web@gmail.com";
+}
+.phone__link:hover span {
+  display: none;
+}
+.phone__link:hover:after {
+  content: "089 4546 154";
+}
+/* tittle and tittle animation */
 .lets {
   position: relative;
   bottom: -11rem;
