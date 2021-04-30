@@ -35,7 +35,7 @@ $(document).ready(function () {
       viewport.top > bounds.bottom
     );
   };
-  
+
   // Nav links animation:
   $(window).scroll(function () {
     if ($("#bio").isOnScreen() == true) {
@@ -71,6 +71,23 @@ $(document).ready(function () {
       names.forEach(delayLoop(display, 10000));
     }
   });
+
+  //cursor
+  var mouseX = 0,
+    mouseY = 0;
+  var xp = 0,
+    yp = 0;
+
+  $(document).mousemove(function (e) {
+    mouseX = e.pageX - 12;
+    mouseY = e.pageY - 12;
+  });
+
+  setInterval(function () {
+    xp += (mouseX - xp) / 6;
+    yp += (mouseY - yp) / 6;
+    $("#circle").css({ left: xp + "px", top: yp + "px" });
+  }, 20);
 });
 
 // SCROLL MAGIC:
@@ -133,12 +150,12 @@ var sceneLets = new ScrollMagic.Scene({
 })
   .setClassToggle("#lets", "lets-active")
   .addTo(controller);
-  
+
 var sceneHello = new ScrollMagic.Scene({
   triggerElement: "#contact",
 })
-.setClassToggle("#hello", "display-none")
-.addTo(controller);
+  .setClassToggle("#hello", "display-none")
+  .addTo(controller);
 
 var sceneTalk = new ScrollMagic.Scene({
   triggerElement: "#contact",
