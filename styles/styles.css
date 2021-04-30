@@ -23,6 +23,10 @@ a {
 .display-none {
   display: none;
 }
+.noted {
+  color: #FFF2CC;
+  /* color: #FFE36B; */
+}
 /* -- FIXED BACKGROUDS -- */
 .bg__back {
   position: fixed;
