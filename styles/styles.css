@@ -41,7 +41,7 @@ a {
 .white {
   color: #ffffff;
 }
-a {
+a{
   text-decoration: none;
 }
 .display-none {
@@ -51,10 +51,12 @@ a {
   color: #fff2cc;
   /* color: #FFE36B; */
 }
+
+
 /* -- FIXED BACKGROUDS -- */
 .bg__back {
   position: fixed;
-  z-index: -2;
+  z-index: -5;
   top: 0;
   right: 0;
   width: 100vw;
@@ -63,7 +65,7 @@ a {
 }
 .bg__front {
   position: fixed;
-  z-index: -1;
+  z-index: -4;
   top: 50px;
   left: 50px;
   width: calc(100vw - 117px);
@@ -183,6 +185,7 @@ section:last-of-type {
   display: flex;
   justify-content: flex-start;
 }
+
 /* -- animation section-- */
 .animation {
   height: calc(100vh + 600px);
@@ -202,6 +205,7 @@ section:last-of-type {
 }
 .hello__windows {
   position: fixed;
+  z-index: -2;
   top: 20vh;
   left: 0;
   overflow: hidden;
@@ -235,6 +239,7 @@ section:last-of-type {
 } */
 .alex__windows {
   position: fixed;
+  z-index: -2;
   bottom: 50px;
   right: 50px;
   overflow: hidden;
@@ -401,6 +406,28 @@ section:last-of-type {
 .bio__img img {
   max-width: 300px;
 }
+
+/* ---------------- WORK ----------------- */ 
+.work__content{
+  padding: 50px;
+}
+.content__item{
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh 0 10vh 0;
+}
+.item__link{
+  color: #ffffff;
+  font-size: 3rem;
+  height: 3rem;
+  position: relative;
+}
+.item__img{
+  width: 40vw;
+  position: relative;
+}
+
+
 
 /* -- contanct -- */
 .contact__title {

@@ -92,6 +92,10 @@ $(document).ready(function () {
   $(".contact__link").hover(function () {
     $("#circle").toggleClass("circle__hovered");
   });
+  
+  $(".item__link").hover(function () {
+    $("#circle").toggleClass("circle__hovered");
+  });
 
   //Logo movement:
   // $(document).mousemove(function (e) {
