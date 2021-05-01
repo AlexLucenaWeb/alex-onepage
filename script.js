@@ -72,7 +72,7 @@ $(document).ready(function () {
     }
   });
 
-  //cursor
+  //cursor:
   var mouseX = 0,
     mouseY = 0;
   var xp = 0,
@@ -88,6 +88,20 @@ $(document).ready(function () {
     yp += (mouseY - yp) / 6;
     $("#circle").css({ left: xp + "px", top: yp + "px" });
   }, 20);
+
+  $(".contact__link").hover(function () {
+    $("#circle").toggleClass("circle__hovered");
+  });
+
+  //Logo movement:
+  // $(document).mousemove(function (e) {
+  //   let moveX1 = (e.pageX * -1) / 60;
+  //   let moveY1 = (e.pageY * -1) / 60;
+
+  //   $('#letterA').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
+  // $('#letterX1').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
+  // $('#letterX2').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
+  // });
 });
 
 // SCROLL MAGIC:
@@ -102,10 +116,6 @@ var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -300 })
 
 // Section: ANimation.
 // letter a:
-// var sceneWindows = new ScrollMagic.Scene({ offset: 10 })
-//   .setClassToggle("#alexWindows", "alex__windows-active")
-//   .addTo(controller);
-
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
   .addTo(controller);
