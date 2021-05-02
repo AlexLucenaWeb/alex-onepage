@@ -92,7 +92,7 @@ $(document).ready(function () {
   $(".contact__link").hover(function () {
     $("#circle").toggleClass("circle__hovered");
   });
-  
+
   $(".item__link").hover(function () {
     $("#circle").toggleClass("circle__hovered");
   });
@@ -106,6 +106,19 @@ $(document).ready(function () {
   // $('#letterX1').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
   // $('#letterX2').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
   // });
+
+  // Simple paralax:
+  function parallax() {
+    var yPos = 0 - 30 - window.pageYOffset / 3;
+    document.getElementById("bandaLink").style.top = 1000 + yPos + "%";
+    document.getElementById("myStorytellerLink").style.top = 900 + yPos + "%";
+    document.getElementById("musicaYTuLink").style.top = 1100 + yPos + "%";
+    document.getElementById("preparaLink").style.top = 900 + yPos + "%";
+  }
+
+  window.addEventListener("scroll", function () {
+    parallax();
+  });
 });
 
 // SCROLL MAGIC:
@@ -149,15 +162,21 @@ var sceneBioImg = new ScrollMagic.Scene({ triggerElement: "#bio", offset: 200 })
   .setClassToggle("#bioImg", "bio__img-active")
   .addTo(controller);
 
+// Section WORK:
 var sceneWorkBg = new ScrollMagic.Scene({ triggerElement: "#work" })
   .setClassToggle("#bgFront", "bg__front-work")
   .addTo(controller);
 
+// var sceneParalax = new ScrollMagic.Scene({ triggerElement: "#banda" })
+//   .setClassToggle("#bandaLink", "item__link-active")
+//   .addIndicators()
+//   .addTo(controller);
+
+// section CONTACT:
 var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
   .setClassToggle("#bgFront", "bg__front-contact")
   .addTo(controller);
 
-// section contact:
 var sceneLets = new ScrollMagic.Scene({
   triggerElement: "#contact",
   offset: 200,
