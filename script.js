@@ -89,9 +89,9 @@ $(document).ready(function () {
   function parallax() {
     var yPos = 0 - 30 - window.pageYOffset / 3;
     document.getElementById("bandaLink").style.top = 1000 + yPos + "%";
-    document.getElementById("myStorytellerLink").style.top = 900 + yPos + "%";
-    document.getElementById("musicaYTuLink").style.top = 1100 + yPos + "%";
-    document.getElementById("preparaLink").style.top = 1200 + yPos + "%";
+    document.getElementById("myStorytellerLink").style.top = 1100 + yPos + "%";
+    document.getElementById("musicaYTuLink").style.top = 1300 + yPos + "%";
+    document.getElementById("preparaLink").style.top = 1600 + yPos + "%";
   }
 
   window.addEventListener("scroll", function () {
