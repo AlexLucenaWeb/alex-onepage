@@ -106,7 +106,7 @@ nav {
   position: fixed;
   top: 50px;
   left: 50px;
-  z-index: 2;
+  z-index: 11;
   width: calc(100vw - 117px);
   text-align: right;
   opacity: 0;
