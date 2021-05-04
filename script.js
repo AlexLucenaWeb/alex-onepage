@@ -190,7 +190,6 @@ var sceneContactLinks = new ScrollMagic.Scene({
   offset: 100,
 })
   .setClassToggle("#inLink", "contact__link-active")
-  .addIndicators()
   .addTo(controller);
 
 var sceneContactLinks2 = new ScrollMagic.Scene({
@@ -198,7 +197,6 @@ var sceneContactLinks2 = new ScrollMagic.Scene({
   offset: 200,
 })
   .setClassToggle("#gitLink", "contact__link-active")
-  .addIndicators()
   .addTo(controller);
 
 var sceneContactLinks3 = new ScrollMagic.Scene({
@@ -206,7 +204,6 @@ var sceneContactLinks3 = new ScrollMagic.Scene({
   offset: 300,
 })
   .setClassToggle("#mailLink", "contact__link-active")
-  .addIndicators()
   .addTo(controller);
 
 var sceneContactLinks4 = new ScrollMagic.Scene({
@@ -214,7 +211,6 @@ var sceneContactLinks4 = new ScrollMagic.Scene({
   offset: 400,
 })
   .setClassToggle("#phoneLink", "contact__link-active")
-  .addIndicators()
   .addTo(controller);
 
 var sceneLets = new ScrollMagic.Scene({
