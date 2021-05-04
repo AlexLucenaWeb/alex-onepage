@@ -28,6 +28,9 @@ $(document).ready(function () {
   });
   // end cursor //
 
+  // -- scroll down -- //
+  $("#scroll").delay(3500).fadeIn("slow");
+
   // -- if on screen -- //
   $.fn.isOnScreen = function () {
     var win = $(window);
@@ -113,6 +116,9 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
       names.forEach(delayLoop(display, 10000));
+      $("#scroll").fadeOut();
+    } else {
+      $("#scroll").fadeIn();
     }
   });
 
