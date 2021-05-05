@@ -1,5 +1,8 @@
 $(document).ready(function () {
-  $(this).scrollTop(0);
+  // prevent malfunction of the firs animation on page refresh
+  $(window).on("beforeunload", function () {
+    $(window).scrollTop(0);
+  });
 
   // -- GENERAL JS -- //
   // -- custom cursor -- //
@@ -31,7 +34,8 @@ $(document).ready(function () {
   // -- scroll down -- //
   $("#scrollBanner").delay(3000).fadeIn("slow");
   $(".arrow-hide").delay(3100).animate({ bottom: "-20px" }, 800);
-
+  // end scroll banner //
+  
   // -- if on screen -- //
   $.fn.isOnScreen = function () {
     var win = $(window);
@@ -54,8 +58,10 @@ $(document).ready(function () {
       viewport.top > bounds.bottom
     );
   };
+  
 
   // ---- SECTION NAV ---- //
+
   // Nav links animation:
   $(window).scroll(function () {
     if ($("#bio").isOnScreen() == true) {
@@ -76,6 +82,7 @@ $(document).ready(function () {
   });
 
   // ---- SECTIONA ANIMATION ---- //
+
   //Create on document ready animations jut if we are in the top of the document
   if (
     $(window).scrollTop() == 0 ||
@@ -103,6 +110,7 @@ $(document).ready(function () {
   });
 
   // ---- SECTION CONTACT ---- //
+
   // Lests talk array:
   const list = document.querySelector("#list");
   const display = (s) => (list.innerText = s);
@@ -122,18 +130,6 @@ $(document).ready(function () {
       $("#scroll").fadeIn();
     }
   });
-
-  // Links logo animations:
-
-  //Logo movement:
-  // $(document).mousemove(function (e) {
-  //   let moveX1 = (e.pageX * -1) / 60;
-  //   let moveY1 = (e.pageY * -1) / 60;
-
-  //   $('#letterA').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
-  // $('#letterX1').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
-  // $('#letterX2').css('background-position', moveX1 + 'px ' + moveY1 + 'px ');
-  // });
 });
 
 // ------------ SCROLL MAGIC: ----------------
