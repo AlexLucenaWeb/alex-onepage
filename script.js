@@ -29,7 +29,8 @@ $(document).ready(function () {
   // end cursor //
 
   // -- scroll down -- //
-  $("#scroll").delay(3500).fadeIn("slow");
+  $("#scrollBanner").delay(3000).fadeIn("slow");
+  $(".arrow-hide").delay(3100).animate({ bottom: "-20px" }, 800);
 
   // -- if on screen -- //
   $.fn.isOnScreen = function () {
