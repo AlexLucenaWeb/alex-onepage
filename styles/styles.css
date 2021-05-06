@@ -205,7 +205,7 @@ li {
 section {
   width: calc(100vw - 117px);
   min-height: calc(100vh - 100px);
-  margin: 50px 0 0 50px;
+  margin-bottom: 100px;
 }
 section:last-of-type {
   margin-bottom: 50px;
