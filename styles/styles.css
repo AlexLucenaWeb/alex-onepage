@@ -51,8 +51,8 @@ a {
   display: none;
 }
 .noted {
-  color: #fff2cc;
-  /* color: #FFE36B; */
+  /* color: #fff2cc; */
+  color: #ffe36b;
 }
 
 /* -- FIXED BACKGROUDS -- */
@@ -109,9 +109,10 @@ a {
   color: #2b2b2b;
   bottom: 15px;
   z-index: 9999;
-  right: 60px;
+  right: 50vw;
   padding-left: 10px;
 }
+
 .scroll__banner span {
   margin-left: 10px;
   display: none;

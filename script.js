@@ -34,8 +34,9 @@ $(document).ready(function () {
   // -- scroll down -- //
   $("#scrollBanner").delay(3000).fadeIn("slow");
   $(".arrow-hide").delay(3100).animate({ bottom: "-20px" }, 800);
+
   // end scroll banner //
-  
+
   // -- if on screen -- //
   $.fn.isOnScreen = function () {
     var win = $(window);
@@ -58,7 +59,6 @@ $(document).ready(function () {
       viewport.top > bounds.bottom
     );
   };
-  
 
   // ---- SECTION NAV ---- //
 
