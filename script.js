@@ -96,7 +96,12 @@ $(document).ready(function () {
     document.getElementById("bandaLink").style.top = 1000 + yPos + "%";
     document.getElementById("myStorytellerLink").style.top = 1100 + yPos + "%";
     document.getElementById("musicaYTuLink").style.top = 1300 + yPos + "%";
-    document.getElementById("preparaLink").style.top = 1600 + yPos + "%";
+    // adapting this link for small screens
+    if ($(window).width() < 1600) {
+      document.getElementById("preparaLink").style.top = 1400 + yPos + "%";
+    }else {
+      document.getElementById("preparaLink").style.top = 1600 + yPos + "%";
+    }
   }
 
   window.addEventListener("scroll", function () {

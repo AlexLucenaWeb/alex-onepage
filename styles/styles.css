@@ -707,32 +707,11 @@ footer {
 }
 
 /* ----------- MEDIA QUERYS ----------- */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-/* from xxx to 1200px */
-@media only screen and (max-width: 1200px) {
-  
-}
 /* from 1201 to 1600px */
 @media only screen and (max-width: 1600px) {
   .iam > p,
   .hello > p {
     font-size: 8rem;
-    color: #ffffff;
-    margin: 0;
   }
   .a-active,
   .x1-active,
@@ -752,3 +731,51 @@ footer {
     font-size: 1rem
   }
 }
+/* from xxx to 1200px */
+@media only screen and (max-width: 1200px) {
+  .iam > p,
+  .hello > p {
+    font-size: 6rem;
+  }
+  .item__link {
+    font-size: 3rem;
+  }
+  .item__link p {
+    font-size: 1.2rem;
+  }
+  .contact__links{
+    left: 10vw;
+  }
+  .link__logo{
+    width:35px;
+  }
+  .link__text{
+    font-size: 1.6rem;
+  }
+  .contact__title{
+    font-size: 5rem;
+  }
+  .talk{
+    font-size: 6rem;
+  }
+  .phone__link:hover:after {
+   font-size: 1.2rem;
+  }
+  .scroll__banner{
+    right: 45vw;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+
