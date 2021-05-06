@@ -1,6 +1,7 @@
 $(document).ready(function () {
   // prevent malfunction of the firs animation on page refresh
   $(window).on("beforeunload", function () {
+    console.log("refresh");
     $(window).scrollTop(0);
   });
 

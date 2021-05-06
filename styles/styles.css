@@ -52,7 +52,7 @@ a {
 }
 .noted {
   /* color: #fff2cc; */
-  color: #ffe36b;
+  color: #ffe36b !important;
 }
 
 /* -- FIXED BACKGROUDS -- */
@@ -447,6 +447,8 @@ section:last-of-type {
 }
 .bio__img img {
   max-width: 300px;
+  /* hello heroku */
+  font-size: 1rem;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all 1s;
