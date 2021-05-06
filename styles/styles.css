@@ -723,9 +723,9 @@ footer {
 @media only screen and (min-width: 992px) {
 }
 /* from xxx to 1200px */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  
 }
-
 /* from 1201 to 1600px */
 @media only screen and (max-width: 1600px) {
   .iam > p,
@@ -738,6 +738,9 @@ footer {
   .x1-active,
   .x2-active {
     bottom: -5vh;
+  }
+  .bio__info{
+    font-size: 1.2rem;
   }
   .item__link {
     font-size: 3.5rem;
