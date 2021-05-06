@@ -45,10 +45,7 @@ $(document).ready(function () {
     var bounds = this.offset();
     bounds.bottom = bounds.top + this.outerHeight();
 
-    return !(
-      viewport.bottom < bounds.top ||
-      viewport.top > bounds.bottom
-    );
+    return !(viewport.bottom < bounds.top || viewport.top > bounds.bottom);
   };
 
   // ---- SECTION NAV ---- //
@@ -79,8 +76,14 @@ $(document).ready(function () {
     $(window).scrollTop() == 0 ||
     $(window).scrollTop() == $(document).height() - $(window).height()
   ) {
-    $("#hello").animate({ left: "20vw" }, "slow");
-    $("#iam").delay(1000).animate({ left: "30vw" }, "slow");
+    // Adapting animation to the with screen:
+    if ($(window).width() < 1600) {
+      $("#hello").animate({ left: "10vw" }, "slow");
+      $("#iam").delay(1000).animate({ left: "25vw" }, "slow");
+    } else {
+      $("#hello").animate({ left: "20vw" }, "slow");
+      $("#iam").delay(1000).animate({ left: "30vw" }, "slow");
+    }
     $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
     $(".bg-hide").css("display", "fixed");
   }
@@ -123,7 +126,7 @@ $(document).ready(function () {
   });
 });
 
-// ------------ SCROLL MAGIC: ----------------
+// ------------ SCROLL MAGIC: ---------------- //
 // init controller
 var controller = new ScrollMagic.Controller();
 
@@ -169,11 +172,6 @@ var sceneWorkBg = new ScrollMagic.Scene({ triggerElement: "#work" })
   .setClassToggle("#bgFront", "bg__front-work")
   .addTo(controller);
 
-// var sceneParalax = new ScrollMagic.Scene({ triggerElement: "#banda" })
-//   .setClassToggle("#bandaLink", "item__link-active")
-//   .addIndicators()
-//   .addTo(controller);
-
 // section CONTACT:
 var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
   .setClassToggle("#bgFront", "bg__front-contact")
@@ -181,28 +179,28 @@ var sceneContactBg = new ScrollMagic.Scene({ triggerElement: "#contact" })
 
 var sceneContactLinks = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 100,
+  offset: 0,
 })
   .setClassToggle("#inLink", "contact__link-active")
   .addTo(controller);
 
 var sceneContactLinks2 = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 200,
+  offset: 50,
 })
   .setClassToggle("#gitLink", "contact__link-active")
   .addTo(controller);
 
 var sceneContactLinks3 = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 300,
+  offset: 100,
 })
   .setClassToggle("#mailLink", "contact__link-active")
   .addTo(controller);
 
 var sceneContactLinks4 = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 400,
+  offset: 150,
 })
   .setClassToggle("#phoneLink", "contact__link-active")
   .addTo(controller);
