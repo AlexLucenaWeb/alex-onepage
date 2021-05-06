@@ -23,11 +23,7 @@ $(document).ready(function () {
     $("#circle").css({ left: xp + "px", top: yp + "px" });
   }, 20);
 
-  $(".contact__link").hover(function () {
-    $("#circle").toggleClass("circle__hovered");
-  });
-
-  $(".item__link").hover(function () {
+  $("a").hover(function () {
     $("#circle").toggleClass("circle__hovered");
   });
   // end cursor //

@@ -25,6 +25,7 @@ a {
 /* cursor */
 .circle {
   position: absolute;
+  z-index: -1;
   border: solid 2px #ffffff;
   width: 20px;
   height: 20px;
