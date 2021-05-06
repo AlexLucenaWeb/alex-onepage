@@ -99,8 +99,14 @@ $(document).ready(function () {
     // adapting this link for small screens
     if ($(window).width() < 1600) {
       document.getElementById("preparaLink").style.top = 1400 + yPos + "%";
-    }else {
+    } else {
       document.getElementById("preparaLink").style.top = 1600 + yPos + "%";
+    }
+    if ($(window).width() < 992) {
+      document.getElementById("bandaLink").style.top = 800 + yPos + "%";
+      document.getElementById("myStorytellerLink").style.top = 850 + yPos + "%";
+      document.getElementById("musicaYTuLink").style.top = 950 + yPos + "%";
+      document.getElementById("preparaLink").style.top = 1100 + yPos + "%";
     }
   }
 
@@ -212,14 +218,14 @@ var sceneContactLinks4 = new ScrollMagic.Scene({
 
 var sceneLets = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 200,
+  // offset: 200,
 })
   .setClassToggle("#lets", "lets-active")
   .addTo(controller);
 
 var sceneTalk = new ScrollMagic.Scene({
   triggerElement: "#contact",
-  offset: 200,
+  // offset: 200,
 })
   .setClassToggle("#list", "talk-active")
   // .addIndicators()

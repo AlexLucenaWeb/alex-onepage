@@ -718,7 +718,7 @@ footer {
   .x2-active {
     bottom: -5vh;
   }
-  .bio__info{
+  .bio__info {
     font-size: 1.2rem;
   }
   .item__link {
@@ -728,54 +728,104 @@ footer {
     font-size: 1.5rem;
   }
   .email__link:hover:after {
-    font-size: 1rem
+    font-size: 1rem;
   }
 }
-/* from xxx to 1200px */
+/* from 992 to 1200px */
 @media only screen and (max-width: 1200px) {
   .iam > p,
   .hello > p {
     font-size: 6rem;
   }
+  /* work s. */
   .item__link {
     font-size: 3rem;
   }
   .item__link p {
     font-size: 1.2rem;
   }
-  .contact__links{
+  .contact__links {
     left: 10vw;
   }
-  .link__logo{
-    width:35px;
+  .link__logo {
+    width: 35px;
   }
-  .link__text{
+  .link__text {
     font-size: 1.6rem;
   }
-  .contact__title{
+  /* contact s. */
+  .contact__title {
     font-size: 5rem;
   }
-  .talk{
+  .talk {
     font-size: 6rem;
   }
   .phone__link:hover:after {
-   font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-  .scroll__banner{
+  .scroll__banner {
     right: 45vw;
   }
 }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* From 768 to 992 */
+@media only screen and (max-width: 992px) {
+  .iam > p,
+  .hello > p {
+    font-size: 4.5rem;
+  }
+  .nav ul{
+    padding-right: 15px;
+  }
+  .nav li {
+    font-size: 1.5rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .section__title{
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .section__content{
+    padding: 30px
+  }
+  .bio__info {
+    font-size: 1rem;
+  }
+  .bio__img img{
+    max-width: 200px;
+  }
+  /* work s. */
+  .work__content{
+    padding:10px
+  }
+  .content__item{
+    height: 55vh;
+  }
+  .item__img{
+    width: 40vw;
+  }
+  .item__link {
+    font-size: 2rem;
+  }
+  .item__link p {
+    font-size: 1.2rem;
+  }
+  /* contact s. */
+  .contact__title {
+    font-size: 4rem;
+  }
+  .talk {
+    font-size: 4.5rem;
+  }
+  /* footer */
+  footer{
+    font-size: 0.8rem;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
-
-
