@@ -901,4 +901,23 @@ footer {
   .scroll__banner {
     right: 5px;
   }
+
+  /* contact */
+  .contact__links {
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+  .block{
+    display: block;
+    padding-top: 50px;
+  }
+  .contact__title{
+    position: relative;
+    right: 0vw;
+    left: calc(30vw - 50px);
+    top: 50px;
+  }
 }
