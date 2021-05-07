@@ -125,9 +125,6 @@ $(document).ready(function () {
     }
   }
 
-  // window.addEventListener("scroll", function () {
-  //   parallax();
-  // });
   $(window).scroll(function () {
     parallax();
   });

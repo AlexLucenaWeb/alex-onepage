@@ -730,9 +730,25 @@ footer {
 }
 /* from 992 to 1200px */
 @media only screen and (max-width: 1200px) {
+/* alex animation section */
   .iam > p,
   .hello > p {
     font-size: 6rem;
+  }
+  .alex{
+    left: 35vw;
+  }
+  .a-active{
+    bottom: -7vh;
+    left: calc(-35vw + 5px);
+  }
+  .x1-active{
+    bottom: -7vh;
+    left: calc(-35vw + 85px);
+  }
+  .x2-active{
+    bottom: -7vh;
+    left: calc(-35vw - 60px);
   }
   /* work s. */
   .item__link {
@@ -891,7 +907,7 @@ footer {
   .item__img-right {
     right: 0px;
   }
-  .item__img-filter{
+  .item__img-filter {
     width: 100%;
   }
   /* Footer */
@@ -910,17 +926,17 @@ footer {
     justify-content: space-between;
     padding-top: 50px;
   }
-  .block{
+  .block {
     display: block;
     padding-top: 50px;
   }
-  .contact__title{
+  .contact__title {
     position: relative;
     right: 0vw;
     left: calc(30vw - 50px);
     top: 50px;
   }
-  .phone__link{
+  .phone__link {
     padding-right: 10px;
   }
 }
