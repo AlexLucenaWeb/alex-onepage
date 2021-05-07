@@ -826,4 +826,79 @@ footer {
 @media only screen and (min-width: 768px) {
 }
 /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* cursor */
+  .circle {
+    display: none;
+  }
+  /* backgrounds */
+  .bg__front {
+    left: 0px;
+    width: 100%;
+  }
 
+  /* Nav*/
+  nav {
+    left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  /* SECTIONS */
+  section {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  /* animation */
+  .animation {
+    width: 100%;
+  }
+  .hello__windows {
+    position: fixed;
+    z-index: -2;
+    top: 100px;
+    left: 0;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+  }
+  .hello {
+    left: 120vw;
+  }
+  .iam {
+    left: 120vw;
+  }
+
+  /* Bio */
+  .bio__info {
+    max-width: 100%;
+  }
+  .bio__img {
+    display: none;
+  }
+
+  /* work */
+  .item__img {
+    width: 100%;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+  .item__link-left,
+  .item__link-right,
+  .item__img-left {
+    left: 0;
+  }
+  .item__img-right {
+    right: 0px;
+  }
+  .item__img-filter{
+    width: 100%;
+  }
+  /* Footer */
+  footer {
+    left: 5px;
+  }
+  .scroll__banner {
+    right: 5px;
+  }
+}
