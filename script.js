@@ -4,15 +4,15 @@ $(document).ready(function () {
     console.log("refresh");
     $(window).scrollTop(0);
   });
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
     });
-});
+  });
 
   // -- GENERAL JS -- //
   // -- custom cursor -- //
@@ -86,15 +86,21 @@ $(document).ready(function () {
     $(window).scrollTop() == $(document).height() - $(window).height()
   ) {
     // Adapting animation to the with screen:
-    if ($(window).width() < 1600) {
+    if ($(window).width() < 600) {
       $("#hello").animate({ left: "10vw" }, "slow");
       $("#iam").delay(1000).animate({ left: "25vw" }, "slow");
+      $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
     } else {
-      $("#hello").animate({ left: "20vw" }, "slow");
-      $("#iam").delay(1000).animate({ left: "30vw" }, "slow");
+      if ($(window).width() < 1600) {
+        $("#hello").animate({ left: "10vw" }, "slow");
+        $("#iam").delay(1000).animate({ left: "25vw" }, "slow");
+      } else {
+        $("#hello").animate({ left: "20vw" }, "slow");
+        $("#iam").delay(1000).animate({ left: "30vw" }, "slow");
+      }
+      $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
+      $(".bg-hide").css("display", "fixed");
     }
-    $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
-    $(".bg-hide").css("display", "fixed");
   }
 
   // ---- SECTION WORK ---- //
