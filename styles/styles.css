@@ -828,10 +828,36 @@ footer {
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .bio__info{
+  /* backgrounds */
+  .bg__front {
+    left: 0px;
+    width: 100vw;
+  }
+
+  /* Nav*/
+  nav {
+    left: 0px;
+    width: 100vw;
+    text-align: center;
+  }
+  /* SECTIONS */ 
+  section {
+    width: 100vw;
+    margin-left: 0px;
+}
+  /* Bio */
+  .bio__info {
     max-width: 100%;
   }
-  .bio__img{
+  .bio__img {
     display: none;
+  }
+
+  /* Footer */
+  footer {
+    left: 5px;
+  }
+  .scroll__banner{
+    right: 5px;
   }
 }

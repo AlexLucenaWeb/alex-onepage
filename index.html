@@ -2,7 +2,7 @@
 <html lang="">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Alex Lucena</title>
     <link rel="shortcut icon" href="./public/images/favicon-alex.png" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -219,15 +219,41 @@
     </footer>
   </body>
   <script src="./script.js"></script>
-</html>
-<style>
-  @media only screen and (max-width: 600px) {
-  .bio__info{
-    max-width: 100%;
-  }
-  .bio__img{
-    display: none;
-  }
-}
+  <style>
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      /* backgrounds */
+      .bg__front {
+        left: 0px;
+        width: 100vw;
+      }
 
-</style>
+      /* Nav*/
+      nav {
+        left: 0px;
+        width: 100vw;
+        text-align: center;
+      }
+      /* SECTIONS */
+      section {
+        width: 100vw;
+        margin-left: 0px;
+      }
+      /* Bio */
+      .bio__info {
+        max-width: 100%;
+      }
+      .bio__img {
+        display: none;
+      }
+
+      /* Footer */
+      footer {
+        left: 5px;
+      }
+      .scroll__banner {
+        right: 5px;
+      }
+    }
+  </style>
+</html>
