@@ -730,23 +730,23 @@ footer {
 }
 /* from 992 to 1200px */
 @media only screen and (max-width: 1200px) {
-/* alex animation section */
+  /* alex animation section */
   .iam > p,
   .hello > p {
     font-size: 6rem;
   }
-  .alex{
+  .alex {
     left: 35vw;
   }
-  .a-active{
+  .a-active {
     bottom: -7vh;
     left: calc(-35vw + 5px);
   }
-  .x1-active{
+  .x1-active {
     bottom: -7vh;
     left: calc(-35vw + 85px);
   }
-  .x2-active{
+  .x2-active {
     bottom: -7vh;
     left: calc(-35vw - 60px);
   }
@@ -782,10 +782,49 @@ footer {
 }
 /* From 768 to 992 */
 @media only screen and (max-width: 992px) {
+  /* alex animation section */
   .iam > p,
   .hello > p {
     font-size: 4.5rem;
   }
+  .a {
+    width: 114px;
+    height: 133px;
+    background-image: url(../public/images/a-letter-m.png);
+  }
+  .a-active{
+    bottom: calc(-4vw + 8px);
+    left: calc(-40vw + 50px);
+  }
+  .le {
+    width: 133px;
+    height: 133px;
+    background-image: url(../public/images/le-letter-m.png);
+    left: 114px;
+  }
+  .x1 {
+    width: 114px;
+    height: 133px;
+    background-image: url(../public/images/x1-letter-m.png);
+    left: 247px;
+  }
+  .x1-active{
+    bottom: calc(-4vw + 9px);
+    left: calc(-40vw + 105px)
+  }
+  .x2 {
+    width: 114px;
+    height: 133px;
+    background-image: url(../public/images/x2-letter-m.png);
+    left: 247px;
+  }
+  .x2-active{
+    bottom: calc(-4vw + 9px);
+    left: calc(-40vw + 10px);
+
+  }
+
+  /* nav */ 
   .nav ul {
     padding-right: 15px;
   }
@@ -796,7 +835,8 @@ footer {
   }
   .link {
     line-height: 0.9rem;
-  }
+  } 
+  /* Sections */
   .section__title {
     font-size: 2rem;
     margin-bottom: 0;
@@ -804,6 +844,8 @@ footer {
   .section__content {
     padding: 30px;
   }
+
+  /* bio */
   .bio__info {
     font-size: 1rem;
   }
@@ -832,6 +874,9 @@ footer {
   }
   .talk {
     font-size: 4.5rem;
+  }
+  .email__link:hover:after {
+    font-size: 0.8rem;
   }
   /* footer */
   footer {
