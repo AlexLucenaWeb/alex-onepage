@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+  $("#asias").delay(6000).fadeIn().delay(4000).fadeOut();
+  $("#asias").click(function() {
+    $("#asias").fadeOut();
+  });
   // prevent malfunction of the firs animation on page refresh
   $(window).on("beforeunload", function () {
     console.log("refresh");
