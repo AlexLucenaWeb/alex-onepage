@@ -934,14 +934,14 @@ footer {
   }
   .alex {
     width: 361px;
-    left: calc(100vw - 370px);
+    left: calc(100vw - 361px);
   }
   .a-active {
     bottom: calc(-4vh - 2px);
     left: calc(-27vw + 40px);
   }
   .x1-active {
-    bottom: -4vh ;
+    bottom: -4vh;
     left: calc(-27vw + 95px);
   }
   .x2-active {
@@ -1001,5 +1001,54 @@ footer {
   }
   .phone__link {
     padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .hello__windows {
+    top: 150px;
+  }
+  .iam {
+    padding-top: 20px;
+  }
+  .alex {
+    width: 270px;
+    height: 200px;
+    left: calc(100vw - 270px);
+  }
+  .a {
+    background-image: url("../public/images/a-letter-s.png");
+    height: 100px;
+    width: 85px;
+  }
+  .le {
+    background-image: url("../public/images/le-letter-s.png");
+    height: 100px;
+    width: 100px;
+    left: 85px;
+  }
+  .x1 {
+    background-image: url("../public/images/x1-letter-s.png");
+    height: 100px;
+    width: 85px;
+    left: 185px;
+  }
+  .x2 {
+    background-image: url("../public/images/x2-letter-s.png");
+    height: 100px;
+    width: 85px;
+    left: 185px;
+  }
+  .a-active {
+    left: calc(-35vw + 27px);
+    bottom: -3vh;
+  }
+  .x1-active {
+    left: calc(-35vw + 67px);
+    bottom: -3vh;
+  }
+  .x2-active {
+    left: -35vw;
+    bottom: -3vh;
   }
 }
