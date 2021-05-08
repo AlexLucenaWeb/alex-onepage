@@ -87,8 +87,8 @@ $(document).ready(function () {
   ) {
     // Adapting animation to the with screen:
     if ($(window).width() < 600) {
-      $("#hello").animate({ left: "10vw" }, "slow");
-      $("#iam").delay(1000).animate({ left: "25vw" }, "slow");
+      $("#hello").animate({ left: "3vw" }, "slow");
+      $("#iam").delay(1000).animate({ left: "3vw" }, "slow");
       $("#alex").delay(2500).animate({ bottom: "0" }, "slow");
     } else {
       if ($(window).width() < 1600) {
