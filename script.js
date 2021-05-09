@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-  $("#asias").delay(6000).fadeIn().delay(4000).fadeOut();
-  $("#asias").click(function() {
-    $("#asias").fadeOut();
-  });
   // prevent malfunction of the firs animation on page refresh
   $(window).on("beforeunload", function () {
     console.log("refresh");
@@ -42,7 +38,7 @@ $(document).ready(function () {
   });
   // end cursor //
 
-  // -- scroll down -- //
+  // -- scroll banner -- //
   $("#scrollBanner").delay(3000).fadeIn("slow");
   $(".arrow-hide").delay(3100).animate({ bottom: "-20px" }, 800);
   // end scroll banner //
@@ -61,9 +57,9 @@ $(document).ready(function () {
 
     return !(viewport.bottom < bounds.top || viewport.top > bounds.bottom);
   };
+  // -- end if on screen -- //
 
   // ---- SECTION NAV ---- //
-
   // Nav links animation:
   $(window).scroll(function () {
     if ($("#bio").isOnScreen() == true) {
@@ -82,9 +78,9 @@ $(document).ready(function () {
       $("#contactLink").addClass("link-active");
     }
   });
+  // en Nav links animation //
 
   // ---- SECTIONA ANIMATION ---- //
-
   //Create on document ready animations jut if we are in the top of the document
   if (
     $(window).scrollTop() == 0 ||
@@ -107,9 +103,9 @@ $(document).ready(function () {
       $(".bg-hide").css("display", "fixed");
     }
   }
+  // end nav //
 
   // ---- SECTION WORK ---- //
-
   // Simple paralax:
   function parallax() {
     var yPos = 0 - 30 - window.pageYOffset / 3;
@@ -133,9 +129,9 @@ $(document).ready(function () {
   $(window).scroll(function () {
     parallax();
   });
+  // end work //
 
   // ---- SECTION CONTACT ---- //
-
   // Lests talk array:
   const list = document.querySelector("#list");
   const display = (s) => (list.innerText = s);
@@ -156,6 +152,7 @@ $(document).ready(function () {
     }
   });
 });
+// end contact //
 
 // ------------ SCROLL MAGIC: ---------------- //
 // init controller
@@ -167,8 +164,7 @@ var sceneNav = new ScrollMagic.Scene({ triggerElement: "#bio", offset: -300 })
   .setClassToggle("#nav", "nav-active")
   .addTo(controller);
 
-// Section: ANimation.
-// letter a:
+// Section: Animation.
 var sceneA = new ScrollMagic.Scene({ offset: 200 })
   .setClassToggle("#letterA", "a-active")
   .addTo(controller);
