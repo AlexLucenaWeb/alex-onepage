@@ -630,7 +630,7 @@ section:last-of-type {
   display: none;
 }
 .email__link:hover:after {
-  content: "alucena.web@gmail.com";
+  content: "hello@alexlucena.com";
 }
 .phone__link:hover span {
   display: none;
