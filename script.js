@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // prevent malfunction of the firs animation on page refresh
   $(window).on("beforeunload", function () {
     console.log("refresh");
@@ -143,15 +142,48 @@ $(document).ready(function () {
       }, i * 1500);
     };
   };
+  // $(window).scroll(function () {
+  //   if ($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
+  //   names.forEach(delayLoop(display, 10000));
+  //   $("#scroll").fadeOut();
+  // } else {
+  //   $("#scroll").fadeIn();
+  // }
+  // });
   $(window).scroll(function () {
-    if ($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
-      names.forEach(delayLoop(display, 10000));
-      $("#scroll").fadeOut();
+    if ($(window).width() > 600) {
+      if (
+        $(window).scrollTop() + $(window).height() > $(document).height() - 1
+      ) {
+        alert("botton")
+        names.forEach(delayLoop(display, 10000));
+        $("#scroll").fadeOut();
+      } else {
+        $("#scroll").fadeIn();
+      }
     } else {
-      $("#scroll").fadeIn();
+      if (
+        $(window).scrollTop() + $(window).height() > $(document).height() - 100
+      ) {
+        names.forEach(delayLoop(display, 10000));
+        $("#scroll").fadeOut();
+      } else {
+        $("#scroll").fadeIn();
+      }
     }
   });
+  //  if ($(window).width() < 600) {
 });
+// $(window).on("scroll", function () {
+//   var scrollHeight = $(document).height();
+//   var scrollPosition = $(window).height() + $(window).scrollTop();
+//   if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+//     names.forEach(delayLoop(display, 10000));
+//     $("#scroll").fadeOut();
+//   } else {
+//     $("#scroll").fadeIn();
+//   }
+// });
 // end contact //
 
 // ------------ SCROLL MAGIC: ---------------- //
