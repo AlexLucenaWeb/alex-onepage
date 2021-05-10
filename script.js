@@ -163,7 +163,7 @@ $(document).ready(function () {
       }
     } else {
       if (
-        $(window).scrollTop() + $(window).height() > $(document).height() - 50
+        $(window).scrollTop() + $(window).height() > $(document).height() - 100
       ) {
         names.forEach(delayLoop(display, 10000));
         $("#scroll").fadeOut();
