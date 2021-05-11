@@ -155,7 +155,6 @@ $(document).ready(function () {
       if (
         $(window).scrollTop() + $(window).height() > $(document).height() - 1
       ) {
-        alert("botton")
         names.forEach(delayLoop(display, 10000));
         $("#scroll").fadeOut();
       } else {
