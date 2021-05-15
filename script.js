@@ -1,7 +1,6 @@
 $(document).ready(function () {
   // prevent malfunction of the firs animation on page refresh
   $(window).on("beforeunload", function () {
-    console.log("refresh");
     $(window).scrollTop(0);
   });
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -171,18 +170,7 @@ $(document).ready(function () {
       }
     }
   });
-  //  if ($(window).width() < 600) {
 });
-// $(window).on("scroll", function () {
-//   var scrollHeight = $(document).height();
-//   var scrollPosition = $(window).height() + $(window).scrollTop();
-//   if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-//     names.forEach(delayLoop(display, 10000));
-//     $("#scroll").fadeOut();
-//   } else {
-//     $("#scroll").fadeIn();
-//   }
-// });
 // end contact //
 
 // ------------ SCROLL MAGIC: ---------------- //
