@@ -107,6 +107,7 @@ $(document).ready(function () {
   // Simple paralax:
   function parallax() {
     var yPos = 0 - 30 - window.pageYOffset / 3;
+    // console.log(yPos);
     document.getElementById("bandaLink").style.top = 1000 + yPos + "%";
     document.getElementById("myStorytellerLink").style.top = 1100 + yPos + "%";
     document.getElementById("musicaYTuLink").style.top = 1300 + yPos + "%";
@@ -152,7 +153,8 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).width() > 600) {
       if (
-        $(window).scrollTop() + $(window).height() > $(document).height() - 1
+        $(window).scrollTop() + $(window).height() >
+        $(document).height() - 1
       ) {
         names.forEach(delayLoop(display, 10000));
         $("#scroll").fadeOut();
@@ -161,7 +163,8 @@ $(document).ready(function () {
       }
     } else {
       if (
-        $(window).scrollTop() + $(window).height() > $(document).height() - 100
+        $(window).scrollTop() + $(window).height() >
+        $(document).height() - 100
       ) {
         names.forEach(delayLoop(display, 10000));
         $("#scroll").fadeOut();
