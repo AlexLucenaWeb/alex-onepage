@@ -451,8 +451,8 @@ section:last-of-type {
   transform: none;
 }
 .bio__img img {
-  max-width: 300px;
-  /* hello heroku */
+  width: 300px;
+  height: 428px;
   font-size: 1rem;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -859,6 +859,7 @@ section:last-of-type {
   }
   .bio__img img {
     max-width: 200px;
+    max-height: 286px;
   }
   /* work s. */
   .work__content {
