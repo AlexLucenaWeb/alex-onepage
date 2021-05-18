@@ -53,7 +53,8 @@ a {
   display: none;
 }
 .noted {
-  color: #52ff8e;
+  /* color: #52ff8e; */
+  color: #2b2b2b;
   /* color: #fff7a1; */
 }
 
