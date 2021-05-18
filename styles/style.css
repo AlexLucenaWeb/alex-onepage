@@ -1,13 +1,13 @@
 /* General styles */
 /* fonts */
 @font-face {
-  font-family: 'jeko';
+  font-family: "jeko";
   font-weight: 400;
   src: url("../public/fonts/Jeko-Regular.ttf");
   font-display: swap;
 }
 @font-face {
-  font-family: 'jeko-bolder';
+  font-family: "jeko-bolder";
   font-weight: bolder;
   src: url("../public/fonts/Jeko-Extra-Bold.ttf");
   font-display: swap;
@@ -54,7 +54,7 @@ a {
 }
 .noted {
   /* color: #2b2b2b; */
-  color: #FEFFD6;
+  color: #feffd6;
 }
 
 /* -- FIXED BACKGROUDS -- */
@@ -425,8 +425,8 @@ section:last-of-type {
 .bio__info a {
   color: #ffffff;
 }
-.bio__info p{
-  font-family: 'jeko';
+.bio__info p {
+  font-family: "jeko";
 }
 .bio__img {
   /* width: 400px; */
@@ -470,6 +470,9 @@ section:last-of-type {
   -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
+}
+.img-s {
+  display: none;
 }
 
 /* ---------------- WORK ----------------- */
@@ -860,6 +863,7 @@ section:last-of-type {
   .bio__img img {
     max-width: 200px;
   }
+
   /* work s. */
   .work__content {
     padding: 10px;
@@ -870,11 +874,20 @@ section:last-of-type {
   .item__img {
     width: 40vw;
   }
+  .item__img-filter{
+    height: 100%;
+  }
   .item__link {
     font-size: 2rem;
   }
   .item__link p {
     font-size: 1.2rem;
+  }
+  .img-l {
+    display: none;
+  }
+  .img-s {
+    display: block;
   }
   /* contact s. */
   .contact__title {
