@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // prevent malfunction of the firs animation on page refresh
+  // prevent malfunction of the first animation on page refresh
   $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
   });
